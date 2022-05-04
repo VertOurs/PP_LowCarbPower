@@ -1,6 +1,7 @@
 package fr.vertours.lowcarbpower.price.controller;
 
 
+import fr.vertours.lowcarbpower.price.dto.PriceDTO;
 import fr.vertours.lowcarbpower.price.service.PriceService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,7 +17,7 @@ public class PriceController {
     }
 
     @GetMapping("/api/LowPrice")
-    public double getPrice() {
+    public PriceDTO getPrice() {
         return service.getPrice();
     }
 }

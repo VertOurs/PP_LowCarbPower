@@ -24,8 +24,8 @@ public class LowPrice {
 
     private LocalDateTime time;
 
-    public LowPrice(String price) {
-        this.price = new BigDecimal(price);
-        this.time = LocalDateTime.now();
+    public LowPrice(BigDecimal price, LocalDateTime time) {
+        this.price = price;
+        this.time = time;
     }
 }

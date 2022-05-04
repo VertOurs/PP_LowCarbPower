@@ -1,11 +1,15 @@
 package fr.vertours.lowcarbservice.service;
 
+import fr.vertours.lowcarbpower.price.dto.PriceDTO;
 import fr.vertours.lowcarbservice.domain.LowPrice;
 import fr.vertours.lowcarbservice.repository.LowPriceRepository;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 @Service
 @EnableScheduling
@@ -21,13 +25,19 @@ public class LowPriceServiceImpl implements LowPriceService {
 
     @Override
     public LowPrice getLatestPrice() {
-        return repository.findTopByOrderByTimeDesc().orElse(new LowPrice("0.1560"));  //syntaxe ?
+        return repository.findTopByOrderByTimeDesc()
+                .orElse(new LowPrice(
+                        BigDecimal.valueOf(0.1560d),
+                        LocalDateTime.now()));
     }
 
     @Scheduled (fixedRate = 1000*5)
     public void priceRequest() {
-        String s = restTemplate.getForObject("http://localhost:80/api/LowPrice",String.class);
-        s = s.replace(",", ".");     //bigDecimal et String
-        repository.save(new LowPrice(s));
+        PriceDTO priceFromAPI = restTemplate.getForObject(
+                "http://localhost:80/api/LowPrice", PriceDTO.class);
+
+        repository.save(new LowPrice(
+                        BigDecimal.valueOf(priceFromAPI.price()),
+                        priceFromAPI.dateTime()));
     }
 }
