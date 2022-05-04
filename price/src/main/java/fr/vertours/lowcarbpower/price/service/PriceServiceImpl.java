@@ -8,10 +8,9 @@ import java.text.DecimalFormat;
 public class PriceServiceImpl implements PriceService {
 
 
-    public String getPrice() {
+    public double getPrice() {
         DecimalFormat df = new DecimalFormat("#.####");
-        double a = 0.1546 + (Math.random() * (0.1587-0.1546));
-        return df.format(a);
+        return 0.1546 + (Math.random() * (0.1587-0.1546));
     }
 
 }

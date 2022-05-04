@@ -16,7 +16,6 @@ public class LowPriceController {
 
     @GetMapping("api/LowCarbService")
     public ResponseEntity<String> getLatestPrice() {
-        System.out.println(service.getLatestPrice().getPrice());
         return ResponseEntity.ok().body(service.getLatestPrice().getPrice().toString());
     }
 }

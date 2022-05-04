@@ -16,7 +16,7 @@ public class PriceController {
     }
 
     @GetMapping("/api/LowPrice")
-    public String getPrice() {
+    public double getPrice() {
         return service.getPrice();
     }
 }
