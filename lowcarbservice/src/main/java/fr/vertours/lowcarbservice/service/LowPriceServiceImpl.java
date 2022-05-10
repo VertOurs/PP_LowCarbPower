@@ -1,6 +1,7 @@
 package fr.vertours.lowcarbservice.service;
 
-import fr.vertours.lowcarbpower.price.dto.PriceDTO;
+
+import fr.vertours.domain.dto.PriceDTO;
 import fr.vertours.lowcarbservice.domain.LowPrice;
 import fr.vertours.lowcarbservice.repository.LowPriceRepository;
 import org.springframework.scheduling.annotation.EnableScheduling;

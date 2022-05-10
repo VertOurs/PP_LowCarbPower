@@ -1,7 +1,7 @@
 package fr.vertours.lowcarbpower.price.controller;
 
 
-import fr.vertours.lowcarbpower.price.dto.PriceDTO;
+import fr.vertours.domain.dto.PriceDTO;
 import fr.vertours.lowcarbpower.price.service.PriceService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
