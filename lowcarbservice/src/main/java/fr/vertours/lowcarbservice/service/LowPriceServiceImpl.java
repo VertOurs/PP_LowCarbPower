@@ -34,7 +34,7 @@ public class LowPriceServiceImpl implements LowPriceService {
     @Scheduled (fixedRate = 1000*5)
     public void priceRequest() {
         PriceDTO priceFromAPI = restTemplate.getForObject(
-                "http://localhost:80/api/LowPrice", PriceDTO.class);
+                "http://Price/api/LowPrice", PriceDTO.class);
 
         repository.save(new LowPrice(
                         BigDecimal.valueOf(priceFromAPI.price()),
