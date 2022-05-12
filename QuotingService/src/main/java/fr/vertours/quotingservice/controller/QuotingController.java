@@ -15,8 +15,9 @@ public class QuotingController {
     public QuotingController(QuotingService service) {
         this.service = service;
     }
-    @GetMapping("/yo")
-    public ResponseEntity<PriceDTO> getPrice(@RequestParam Integer nbKWh) {
+
+    @GetMapping("/api/quotingService")
+    public ResponseEntity<PriceDTO> getPrice(@RequestParam int nbKWh) {
         return ResponseEntity.ok().body(service.getFinalPrice(nbKWh));
     }
 }
