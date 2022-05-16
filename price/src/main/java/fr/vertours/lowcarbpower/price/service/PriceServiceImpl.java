@@ -12,7 +12,6 @@ public class PriceServiceImpl implements PriceService {
 
 
     public PriceDTO getPrice() {
-        DecimalFormat df = new DecimalFormat("#.####");
         double price = 0.1546 + (Math.random() * (0.1587 - 0.1546));
         return  new PriceDTO(price, LocalDateTime.now());
     }

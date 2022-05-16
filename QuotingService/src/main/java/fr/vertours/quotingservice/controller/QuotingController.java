@@ -18,6 +18,6 @@ public class QuotingController {
 
     @GetMapping("/api/quotingService")
     public ResponseEntity<PriceDTO> getPrice(@RequestParam int nbKWh) {
-        return ResponseEntity.ok().body(service.getFinalPrice(nbKWh));
+        return ResponseEntity.ok().body(service.getFinalPriceDTO(nbKWh));
     }
 }

@@ -27,7 +27,7 @@ class PriceControllerTest {
                 .andExpect(
                         jsonPath(
                                 "$.dateTime",
-                                containsString("2022")  ));
+                                containsString("2022")));
 
     }
 }

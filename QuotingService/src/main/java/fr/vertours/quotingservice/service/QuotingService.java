@@ -4,5 +4,5 @@ import fr.vertours.domain.dto.PriceDTO;
 
 public interface QuotingService {
 
-    PriceDTO getFinalPrice(Integer nbKWH);
+    PriceDTO getFinalPriceDTO(Integer nbKWH);
 }

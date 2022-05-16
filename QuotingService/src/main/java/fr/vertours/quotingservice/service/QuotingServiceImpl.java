@@ -21,25 +21,23 @@ public class QuotingServiceImpl implements QuotingService {
 
 
     @Override
-    public PriceDTO getFinalPrice(Integer nbKWH) {
+    public PriceDTO getFinalPriceDTO(Integer nbKWH) {
         return new PriceDTO(
-                calculateFinalPrice(nbKWH),
+                calculateFinalPrice(nbKWH).doubleValue(),
                 LocalDateTime.now()
         );
     }
 
-    public double calculateFinalPrice(Integer nbKWh) {
+    public BigDecimal calculateFinalPrice(Integer nbKWh) {
         BigDecimal cleanPrice =
-                BigDecimal.valueOf(getCleansSourcesPercentage(nbKWh))
-                .multiply(BigDecimal
-                        .valueOf(lowCarbService.getLowCarbServiceAPI()));
-
+                getCleansSourcesPercentage(nbKWh)
+                        .multiply(
+                                lowCarbService.getLowCarbPrice());
         BigDecimal dirtyPrice =
-                BigDecimal.valueOf(getDirtiesSourcesPercentage(nbKWh))
-                        .multiply(BigDecimal
-                                .valueOf(coalFiredService.getCoalFiredMock()));
-
-        return cleanPrice.add(dirtyPrice).doubleValue();
+                getDirtiesSourcesPercentage(nbKWh)
+                        .multiply(
+                                coalFiredService.getCoalFiredStub());
+        return cleanPrice.add(dirtyPrice);
 
     }
 

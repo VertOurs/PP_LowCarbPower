@@ -3,6 +3,8 @@ package fr.vertours.lowcarbservice.service;
 import fr.vertours.lowcarbservice.domain.LowPrice;
 import fr.vertours.lowcarbservice.repository.LowPriceRepository;
 import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.web.client.RestTemplate;
 
@@ -16,8 +18,11 @@ import static org.mockito.Mockito.*;
 @SpringBootTest
 class LowPriceServiceImplTest {
 
-     LowPriceRepository repository = mock(LowPriceRepository.class);
-     RestTemplate restTemplate = mock(RestTemplate.class);
+    @Mock
+     LowPriceRepository repository;
+
+    @Mock
+     RestTemplate restTemplate;
 
      LowPriceServiceImpl classUnderTest = new LowPriceServiceImpl(
              repository, restTemplate);
@@ -43,5 +48,9 @@ class LowPriceServiceImplTest {
 
     @Test
     void priceRequest() {
+        //Scheduled possible en unit ou seulement en Intégration ?
+        // autre façon de unit test ?
+        verify(repository, times(1))
+                .save(any(LowPrice.class));
     }
 }

@@ -4,6 +4,8 @@ import fr.vertours.domain.dto.PriceDTO;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.math.BigDecimal;
+
 @Service
 public class LowCarbServiceImpl implements LowCarbService {
 
@@ -12,10 +14,11 @@ public class LowCarbServiceImpl implements LowCarbService {
     public LowCarbServiceImpl(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
+
     @Override
-    public double getLowCarbServiceAPI() {
+    public BigDecimal getLowCarbPrice() {
         PriceDTO priceFromAPI = restTemplate.getForObject(
                 "http://LowCarbService/api/LowPrice", PriceDTO.class);
-        return priceFromAPI.price();
+        return BigDecimal.valueOf(priceFromAPI.price());
     }
 }
