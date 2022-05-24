@@ -19,6 +19,7 @@ public class LowCarbServiceImpl implements LowCarbService {
     public BigDecimal getLowCarbPrice() {
         PriceDTO priceFromAPI = restTemplate.getForObject(
                 "http://LowCarbService/api/LowPrice", PriceDTO.class);
+
         return BigDecimal.valueOf(priceFromAPI.price());
     }
 }

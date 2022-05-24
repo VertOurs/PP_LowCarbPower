@@ -28,12 +28,15 @@ import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.bind.annotation.CookieValue;
 
+import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2022-05-16T12:39:15.018Z[GMT]")
+@Generated(
+        value = "io.swagger.codegen.v3.generators.java.SpringCodegen",
+        date = "2022-05-16T12:39:15.018Z[GMT]")
 @Validated
 public interface CatalogApi {
 

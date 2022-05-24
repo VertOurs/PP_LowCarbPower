@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <title>QuotingService</title>
+</head>
+
+<body>
+<div>
+    <form action="#" method="post" class="form-signin text-center" id="form">
+        <!-- Email -->
+        <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Email" id="email" name="email" >
+        </div>
+        <!--Nb kWh -->
+        <div class="mb-3">
+            <input type="number" class="form-control" placeholder="Please enter your consumption (KWH) for one month" id="kwh" name="kwh">
+        </div>
+
+        <!--Submit button -->
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+    </form>
+</div>
+<div>
+    <p>The price for one month is <strong><span id="price"></span></strong></p>
+</div>
+
+<script src="../static/js/script.js"></script>
+
+</body>
+</html>

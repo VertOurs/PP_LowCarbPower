@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class QuotingController {
+public class QuotingAPIController {
 
     private final QuotingService service;
 
-    public QuotingController(QuotingService service) {
+    public QuotingAPIController(QuotingService service) {
         this.service = service;
     }
 
