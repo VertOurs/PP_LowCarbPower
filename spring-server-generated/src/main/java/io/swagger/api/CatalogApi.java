@@ -40,9 +40,16 @@ import java.util.Map;
 @Validated
 public interface CatalogApi {
 
-    @Operation(summary = "List or find Catalog objects", description = "This operation list or find Catalog entities", tags={ "catalog" })
+    @Operation(summary = "List or find Catalog objects",
+            description = "This operation list or find Catalog entities",
+            tags={ "catalog" })
     @ApiResponses(value = { 
-        @ApiResponse(responseCode = "200", description = "Success", content = @Content(mediaType = "application/json;charset&#x3D;utf-8", array = @ArraySchema(schema = @Schema(implementation = Catalog.class)))),
+        @ApiResponse(responseCode = "200",
+                description = "Success",
+                content =
+                @Content(mediaType = "application/json;charset&#x3D;utf-8",
+                        array = @ArraySchema(schema =
+                        @Schema(implementation = Catalog.class)))),
         
         @ApiResponse(responseCode = "400", description = "Bad Request", content = @Content(mediaType = "application/json;charset&#x3D;utf-8", schema = @Schema(implementation = Error.class))),
         

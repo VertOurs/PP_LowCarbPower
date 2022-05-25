@@ -31,15 +31,6 @@ public class Swagger2SpringBoot implements CommandLineRunner {
         new SpringApplication(Swagger2SpringBoot.class).run(args);
     }
 
-    @Configuration
-    static class CustomDateConfig extends WebMvcConfigurerAdapter {
-        @Override
-        public void addFormatters(FormatterRegistry registry) {
-            registry.addConverter(new LocalDateConverter("yyyy-MM-dd"));
-            registry.addConverter(new LocalDateTimeConverter("yyyy-MM-dd'T'HH:mm:ss.SSS"));
-        }
-    }
-
     class ExitException extends RuntimeException implements ExitCodeGenerator {
         private static final long serialVersionUID = 1L;
 
