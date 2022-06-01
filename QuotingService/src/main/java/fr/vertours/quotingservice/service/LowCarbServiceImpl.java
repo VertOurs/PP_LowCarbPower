@@ -18,7 +18,7 @@ public class LowCarbServiceImpl implements LowCarbService {
     @Override
     public BigDecimal getLowCarbPrice() {
         PriceDTO priceFromAPI = restTemplate.getForObject(
-                "http://LowCarbService/api/LowPrice", PriceDTO.class);
+                "http://LowCarbService/api/LowCarbService", PriceDTO.class);
 
         return BigDecimal.valueOf(priceFromAPI.price());
     }

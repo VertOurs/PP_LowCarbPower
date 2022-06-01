@@ -26,7 +26,7 @@ public class QuotingUIController {
 
     @PostMapping("/quotingService")
     public String result(@RequestParam int kwh, Model model) {
-        System.out.println("je suis passé par la");
+
         model.addAttribute("dto", quotingService.getFinalPriceDTO(kwh));
         return "index";
     }
