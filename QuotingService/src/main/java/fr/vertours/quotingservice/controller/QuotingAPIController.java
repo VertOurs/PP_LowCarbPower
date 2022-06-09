@@ -13,8 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class QuotingAPIController {
 
     private final QuotingService service;
-    private ApplicationEventPublisher publisher;      // Pourquoi Autowired et pas le mettre dans le constructeur ?
-
+    private ApplicationEventPublisher publisher;
 
     public QuotingAPIController(QuotingService service, ApplicationEventPublisher publisher) {
         this.service = service;
@@ -24,6 +23,7 @@ public class QuotingAPIController {
 
     @GetMapping("/api/quotingService")
     public ResponseEntity<PriceDTO> getPrice(@RequestParam int nbKWh, @RequestParam String email) {
+        System.out.println(nbKWh);
         PriceDTO dto = service.getFinalPriceDTO(nbKWh);
         publisher.publishEvent(new QuoteEvent(this, email, dto));
         return ResponseEntity.ok().body(dto);
