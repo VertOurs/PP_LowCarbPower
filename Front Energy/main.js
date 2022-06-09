@@ -10,18 +10,18 @@ errorEmail.style.display = "none";
 errorKWh.style.display = "none";
 formulaire.addEventListener('submit', (e) => {getEstimation()});
 
-function getEstimation() {
+async function getEstimation() {
   let url = 'http://localhost:8080/api/quotingService?nbKWh=' 
   + inputKWh 
   + '&email=' 
   + inputEmail;
 
-const quotingRequest = fetch(url, {method: 'GET'});
+const quotingRequest = await fetch(url, {method: 'GET'});
 
 if (!quotingRequest.ok) {
   alert('sorry the service is not currently available')
 } else {
-  let estimation = quotingRequest.json();
+  let estimation = await quotingRequest.json();
   console.log(estimation);
   document.querySelector('#estimation').textContent = estimation.price;
 }
