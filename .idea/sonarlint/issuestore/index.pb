@@ -59,3 +59,13 @@ UQuotingService/src/main/java/fr/vertours/quotingservice/service/CoalFiredServic
 WQuotingService/src/main/java/fr/vertours/quotingservice/service/LowCarbServiceImpl.java,f/d/fd8d0f3193cbfb3eda40bc94c0793fd7baea9f6e
 ˆ
 XQuotingService/src/main/java/fr/vertours/quotingservice/service/CoalFireServiceStub.java,c/9/c940521a846e6ab8b34a1eb97dfa1899712fee49
+D
+EurekaServer/pom.xml,f/9/f93fe3bd91b42d4c95457b4c07dc854d94251529
+ƒ
+SQuotingService/src/main/java/fr/vertours/quotingservice/service/QuotingService.java,6/7/673ae0e84cb90c1de32fc23b92226ed5fe67bc14
+
+OQuotingService/src/main/java/fr/vertours/quotingservice/constant/Constants.java,5/0/50ee0a9c948d88e2a660d6730086d24e09c597d5
+‡
+WQuotingService/src/main/java/fr/vertours/quotingservice/service/QuotingServiceImpl.java,1/e/1e8a5361411d0ded96c6fe6dd9e6f9a1e840cfd6
+F
+lowcarbservice/pom.xml,8/c/8c3bcf02a15cb3692c6828f9702ab3c47c66e020
