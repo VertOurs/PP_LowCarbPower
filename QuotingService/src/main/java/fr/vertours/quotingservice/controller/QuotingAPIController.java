@@ -23,7 +23,6 @@ public class QuotingAPIController {
 
     @GetMapping("/api/quotingService")
     public ResponseEntity<PriceDTO> getPrice(@RequestParam int nbKWh, @RequestParam String email) {
-        System.out.println(nbKWh);
         PriceDTO dto = service.getFinalPriceDTO(nbKWh);
         publisher.publishEvent(new QuoteEvent(this, email, dto));
         return ResponseEntity.ok().body(dto);

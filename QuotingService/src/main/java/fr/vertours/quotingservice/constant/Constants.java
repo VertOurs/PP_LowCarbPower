@@ -4,6 +4,9 @@ import java.math.BigDecimal;
 
 public class Constants {
 
+    private Constants() {
+    }
+
     public final static BigDecimal CLEANS_SOURCES_PERCENTAGE = BigDecimal.valueOf(0.81);
     public final static BigDecimal DIRTIES_SOURCES_PERCENTAGE = BigDecimal.valueOf(0.19);
     public final static BigDecimal HUNDRED = BigDecimal.valueOf(100);

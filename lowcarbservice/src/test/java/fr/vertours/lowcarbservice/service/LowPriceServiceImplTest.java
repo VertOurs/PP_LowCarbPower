@@ -48,8 +48,6 @@ class LowPriceServiceImplTest {
 
     @Test
     void priceRequest() {
-        //Scheduled possible en unit ou seulement en Intégration ?
-        // autre façon de unit test ?
         verify(repository, times(1))
                 .save(any(LowPrice.class));
     }

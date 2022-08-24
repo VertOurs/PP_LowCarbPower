@@ -23,35 +23,10 @@ public class MonitoringConfig  implements ApplicationListener<QuoteEvent> {
 
     @Override
     public void onApplicationEvent(QuoteEvent event) {
-//        Counter counter = Counter
-//                .builder("priceRequest")
-//                .description(" c'est une bonne question")
-//                .tags("dev", "performance")
-//                .register(registry);
-//        counter.increment(1);
-//        Counter counter2 = Counter
-//                .builder("priceRequestEmail")
-//                .description(" c'est toujours une bonne question")
-//                .tags("dev", "performance")
-//                .register(registry);
-//        counter2.increment(2);
         registry.counter("priceRequest", Tags.of("dev", "performance"));
         registry.counter("emailRequest", Tags.of("dev", "performance"));
 
     }
 
-
-//public class MonitoringConfig {
-//
-//    @EventListener
-//    void countedQuoteEvent(QuoteEvent event) {
-    // registry.counter("priceRequest", Tags.of("dev", "performance"));
-//        System.out.println("?");
-//    }
-
-//    @Bean
-//    public CountedAspect timedAspect(MeterRegistry registry) {
-//        return new CountedAspect(registry);
-//    }
 
 }

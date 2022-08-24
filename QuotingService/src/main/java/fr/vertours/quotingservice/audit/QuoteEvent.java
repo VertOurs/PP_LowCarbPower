@@ -4,8 +4,7 @@ package fr.vertours.quotingservice.audit;
 import fr.vertours.domain.dto.PriceDTO;
 import org.springframework.context.ApplicationEvent;
 
-import java.time.Clock;
-import java.time.LocalDateTime;
+
 
 public class QuoteEvent extends ApplicationEvent {
 

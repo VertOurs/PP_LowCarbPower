@@ -4,11 +4,11 @@ let errorEmail = document.querySelector('#errorEmail');
 let inputKWh = document.querySelector('#kwh')
 let errorKWh = document.querySelector('#errorKWh');
 
-let formulaire = document.querySelector('#formulaire');
+let formulate = document.querySelector('#formulaire');
 
 errorEmail.style.display = "none";
 errorKWh.style.display = "none";
-formulaire.addEventListener('submit', (e) => {getEstimation()});
+formulate.addEventListener('submit', (e) => {getEstimation()});
 
 async function getEstimation() {
   let url = 'http://localhost:8080/api/quotingService?nbKWh=' 
