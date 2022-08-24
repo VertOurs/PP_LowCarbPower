@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Domain/Domain.iml" filepath="$PROJECT_DIR$/Domain/Domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EurekaServer/EurekaServer.iml" filepath="$PROJECT_DIR$/EurekaServer/EurekaServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/P2_LowCarbPower.iml" filepath="$PROJECT_DIR$/.idea/P2_LowCarbPower.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PrometheusTest/PrometheusTest/PrometheusTest.iml" filepath="$PROJECT_DIR$/PrometheusTest/PrometheusTest/PrometheusTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QuotingService/QuotingService.iml" filepath="$PROJECT_DIR$/QuotingService/QuotingService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lowcarbservice/lowcarbservice.iml" filepath="$PROJECT_DIR$/lowcarbservice/lowcarbservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/price/price.iml" filepath="$PROJECT_DIR$/price/price.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-server-generated/swagger-spring.iml" filepath="$PROJECT_DIR$/spring-server-generated/swagger-spring.iml" />
+    </modules>
+  </component>
+</project>

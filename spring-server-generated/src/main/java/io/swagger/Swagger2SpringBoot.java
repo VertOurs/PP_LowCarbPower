@@ -1,7 +1,6 @@
 package io.swagger;
 
-import io.swagger.configuration.LocalDateConverter;
-import io.swagger.configuration.LocalDateTimeConverter;
+
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.ExitCodeGenerator;
